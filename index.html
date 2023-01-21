@@ -27,7 +27,24 @@
 			max-width: 500px;
 
 		}
+		#form {
+			margin-top: 20px;
+		}
 	</style>
+		<script>
+
+		$( "form" ).submit(function( ) {
+			console.log('form');
+			console.log($("input").first().val());
+		  if ( $("input").first().val() === "disney" ) {
+		  	console.log("nice");
+		    $('#res').append("Nice");
+		  }
+		  else {
+		  	$('#res').append( "T'es une merde !" );
+		  }
+		});
+	</script>
 </head>
 <body style="margin: 50px" id="bg-img">
 	<div>
@@ -36,22 +53,26 @@
 			<img src="img/a-neon-city-4m-2560x1440.jpg">
 			<img src="img/a-neon-city-4m-2560x1440.jpg">
 		</div>
-		<h1>Réponds à cette question</h1>
+		<form id="form">
+			<h1>Réponds à cette question</h1>
 
-		<input type="text" placeholder="Saisis ta réponse" />
-		<input type="submit" value="Valider"/>
+			<input id="input" type="text" placeholder="Saisis ta réponse" />
+			<input type="submit" value="Valider"/>
 
-		<div id="bad">
-			<p>T'es une merde</p>
-		</div>
-		<div id="good">
-			<p>Nice!</p>
+			<p id="res"></p>
+
 		</div>
 
 	</div>
 	
 </body>
 <foot>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"
+	>
+	</script>
 
 </foot>
 </html>
