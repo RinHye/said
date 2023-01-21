@@ -14,25 +14,37 @@
 	<title>Joyeux anniversaire Kenza</title>
 
 	<style>
+		body {
+			text-align: center;
+		}
+		.img-head {
+			display: flex;
+			justify-content: space-between;
 
+		}
+		.img-head img {
+			object-fit: fill;
+			max-width: 500px;
+
+		}
 	</style>
 </head>
 <body style="margin: 50px" id="bg-img">
 	<div>
 		<div class="img-head">
-			<img src="img/a-neon-city-4m-2560x1440.jpg" width="500px">
-			<img src="img/a-neon-city-4m-2560x1440.jpg" width="500px">
-
+			<img src="img/a-neon-city-4m-2560x1440.jpg">
+			<img src="img/a-neon-city-4m-2560x1440.jpg">
+			<img src="img/a-neon-city-4m-2560x1440.jpg">
 		</div>
 		<h1>Réponds à cette question</h1>
 
 		<input type="text" placeholder="Saisis ta réponse" />
 		<input type="submit" value="Valider"/>
 
-		<div>
+		<div id="bad">
 			<p>T'es une merde</p>
 		</div>
-		<div>
+		<div id="good">
 			<p>Nice!</p>
 		</div>
 
